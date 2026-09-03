@@ -1,0 +1,36 @@
+name: Publish OTA Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out release repo
+        uses: actions/checkout@v4
+
+      - name: Validate package files
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="${GITHUB_REF_NAME}"
+          dir="release-packages/${version}"
+          test -f "${dir}/manifest.json"
+          test -f "${dir}/slot-${version}.img.gz"
+          test -f "${dir}/slot-${version}.img.gz.sig"
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          files: |
+            release-packages/${{ github.ref_name }}/manifest.json
+            release-packages/${{ github.ref_name }}/slot-${{ github.ref_name }}.img.gz
+            release-packages/${{ github.ref_name }}/slot-${{ github.ref_name }}.img.gz.sig
+          fail_on_unmatched_files: true
