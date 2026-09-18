@@ -1,0 +1,13 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.0.06-rockbase-k230-20260918-2a1cbd33-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-09-18",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.06-rockbase-k230-20260918-2a1cbd33-ota/slot-v0.0.06-rockbase-k230-20260918-2a1cbd33-ota.img.gz",
+    "sha256": "9820d56a3b312af85121952c500afbe484ded6c0a07ea6dab54542d2e02607c6",
+    "size": 45179706,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.06-rockbase-k230-20260918-2a1cbd33-ota/slot-v0.0.06-rockbase-k230-20260918-2a1cbd33-ota.img.gz.sig"
+  }
+}
