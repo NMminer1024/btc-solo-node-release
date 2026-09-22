@@ -2,7 +2,7 @@
   "product": "rockbase",
   "hw": ["rockbase"],
   "version": "v0.3.00-rockbase-k230-20260922-df43f9f7-ota",
-  "min_version": "v1.0.0",
+  "min_version": "v0.0.01",
   "released": "2026-09-22",
   "slot": {
     "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.3.00-rockbase-k230-20260922-df43f9f7-ota/slot-v0.3.00-rockbase-k230-20260922-df43f9f7-ota.img.gz",
