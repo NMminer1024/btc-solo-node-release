@@ -1,4 +1,4 @@
-# Rockbase — Bitcoin Solo Mining All-in-One
+# Rockbase — Bitcoin Solo Node
 
 ---
 
