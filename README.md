@@ -22,10 +22,10 @@ Rockbase 是一台**开箱即用的比特币节点 + 独矿（Solo Mining）一�
 | 项目 | 参数 |
 |------|------|
 | 处理器 | Canaan K230（RISC-V 架构） |
-| 内存 | 1 GB / 2 GB（按批次） |
+| 内存 | 1 GB |
 | 屏幕 | 彩色触摸屏（480×800 物理分辨率） |
-| 网络 | 有线以太网（自动获取 IP）+ 内置 WiFi |
-| 存储 | 内置 eMMC + 可扩展 SD 卡（存放区块链数据） |
+| 网络 | 板载 WiFi + USB 转有线网卡（自动获取 IP） |
+| 存储 | SD 卡（存放区块链数据） |
 | 供电 | DC 电源 |
 
 ### 触摸屏界面
@@ -68,6 +68,15 @@ Rockbase 是一台**开箱即用的比特币节点 + 独矿（Solo Mining）一�
 
 ![Web About](docs/img/web-about.png)
 
+### 网络连接
+
+Rockbase 支持两种联网方式，开机时自动识别：
+
+- **板载 WiFi** —— 连接家里的无线网即可；
+- **USB 转有线网卡** —— 插一根 USB 网卡走有线网络，更稳定。兼容常见芯片的 USB 网卡（Realtek RTL8152/RTL8153、ASIX AX88179 千兆、AX88772 百兆等），即插即用，无需安装驱动。
+
+两种方式都自动获取 IP（DHCP）。如果同时接了 USB 网卡和 WiFi，优先使用 USB 有线网络。
+
 ### 接入矿机
 
 1. 确认矿机与 Rockbase 在**同一局域网**内；
@@ -91,7 +100,7 @@ Rockbase 内置 **A/B 双分区 OTA 升级**，升级过程断电也不会变砖
 3. 有新版时点击 **Update Now**，设备会自动下载、校验签名、写入备用分区并重启；
 4. 如果新固件启动异常，设备会**自动回滚**到旧版本。
 
-也可以手动下载本仓库 [Releases](https://github.com/NMminer1024/btc-solo-node-release/releases) 页面里的固件包，通过网页控制台上传升级。
+所有固件包都发布在本仓库的 [Releases](https://github.com/NMminer1024/btc-solo-node-release/releases) 页面，设备检查更新时会自动从那里获取。
 
 ### 版本与发布说明
 
@@ -142,10 +151,10 @@ No OS to install, no software to configure, no command line required. The device
 | Item | Spec |
 |------|------|
 | Processor | Canaan K230 (RISC-V) |
-| Memory | 1 GB / 2 GB (by batch) |
+| Memory | 1 GB |
 | Display | Color touchscreen (480×800 physical) |
-| Network | Ethernet (DHCP) + built-in WiFi |
-| Storage | Built-in eMMC + expandable SD card (blockchain data) |
+| Network | On-board WiFi + USB-to-Ethernet adapter (DHCP) |
+| Storage | SD card (blockchain data) |
 | Power | DC power adapter |
 
 ### Touchscreen UI
@@ -188,6 +197,15 @@ Open `http://<device-IP>` in any browser (the IP is shown on the Network page or
 
 ![Web About](docs/img/web-about.png)
 
+### Network Connection
+
+Rockbase supports two network paths, auto-detected at boot:
+
+- **On-board WiFi** — just join your home wireless network;
+- **USB-to-Ethernet adapter** — plug in a USB NIC for a more stable wired connection. Common USB NIC chips are supported out of the box (Realtek RTL8152/RTL8153, ASIX AX88179 gigabit, AX88772 100M, etc.) — no drivers needed.
+
+Both use DHCP. If a USB NIC and WiFi are both available, the USB wired path takes priority.
+
 ### Connecting Your Miner
 
 1. Make sure your miner and Rockbase are on the **same LAN**;
@@ -211,7 +229,7 @@ Rockbase uses **A/B dual-slot OTA updates** — even a power loss mid-update won
 3. If one is, tap **Update Now** — the device downloads, signature-verifies, writes the standby slot, and reboots automatically;
 4. If the new firmware fails to boot, the device **rolls back automatically** to the previous version.
 
-You can also download firmware packages from the [Releases](https://github.com/NMminer1024/btc-solo-node-release/releases) page and upload them manually via the web console.
+All firmware packages are published on the [Releases](https://github.com/NMminer1024/btc-solo-node-release/releases) page, which the device checks automatically when looking for updates.
 
 ### Versioning & Releases
 
