@@ -1,7 +1,5 @@
 # Rockbase — Bitcoin Solo Mining All-in-One
 
-**[ English ]** · [ 中文 ](README.zh-CN.md)
-
 ---
 
 ### What is this?
