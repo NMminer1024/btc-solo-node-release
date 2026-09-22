@@ -15,6 +15,22 @@ Plug in power, connect to your network, and it starts doing two things:
 
 No OS to install, no software to configure, no command line required. The device ships with a color touchscreen and a web console, so every status is visible at a glance.
 
+### What It Can and Can't Do
+
+**It can:**
+
+- Verify every block on the Bitcoin mainnet by itself, with no reliance on centralized services;
+- Provide a local mining endpoint for your miners — any block reward you find is 100% yours, with no fee share;
+- Monitor node, miner, and device health in real time (touchscreen + web console).
+
+**It can't (common misconceptions):**
+
+- **It is not a wallet** — it does not store your private keys and cannot receive, send, or spend coins for you;
+- **It does not mine by itself** — the device has no hashrate of its own; you must connect your own miner;
+- **Solo mining ≠ finding a block every day** — finding a block is pure luck; with small hashrate it can take months to find one. That's normal for solo mining, not a fault;
+- **It is not a full archive node** — it runs in pruned mode, keeping only the most recent ~4 GB of block data, so it cannot serve complete historical block queries;
+- **It offers no trading or exchange services** — it does exactly one thing: node validation and mining.
+
 ### Hardware Specifications
 
 | Item | Spec |
