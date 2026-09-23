@@ -4,12 +4,12 @@
 
 ### What is this?
 
-Rockbase is an **out-of-the-box Bitcoin node + solo mining all-in-one device**.
+Rockbase is an **out-of-the-box standalone Bitcoin node** — it is not a miner, it is the node that serves your miners.
 
 Plug in power, connect to your network, and it starts doing two things:
 
 1. **Running a Bitcoin validating node** — it downloads and verifies every block on the blockchain itself, with no reliance on third-party data (in pruned mode, keeping only recent block data to save space);
-2. **Serving a local Stratum mining endpoint** — plug your miner into it and mine the Bitcoin mainnet directly. Any block reward you find is 100% yours.
+2. **Serving a local Stratum endpoint for your miners** — point your miner at it and mine the Bitcoin mainnet directly. Any block reward you find is 100% yours.
 
 No OS to install, no software to configure, no command line required. The device ships with a color touchscreen and a web console, so every status is visible at a glance.
 
@@ -23,8 +23,8 @@ No OS to install, no software to configure, no command line required. The device
 
 **It can't (common misconceptions):**
 
+- **It is not a miner** — the device has no hashrate of its own; it is a node that serves your miners, and you must connect your own miner to mine;
 - **It is not a wallet** — it does not store your private keys and cannot receive, send, or spend coins for you;
-- **It does not mine by itself** — the device has no hashrate of its own; you must connect your own miner;
 - **Solo mining ≠ finding a block every day** — finding a block is pure luck; with small hashrate it can take months to find one. That's normal for solo mining, not a fault;
 - **It is not a full archive node** — it runs in pruned mode, keeping only the most recent ~4 GB of block data, so it cannot serve complete historical block queries;
 - **It offers no trading or exchange services** — it does exactly one thing: node validation and mining.
