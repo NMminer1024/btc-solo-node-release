@@ -85,7 +85,9 @@ Open `http://<device-IP>` in any browser (the IP is shown on the Network page or
 Rockbase supports two network paths, auto-detected at boot:
 
 - **On-board WiFi** — just join your home wireless network;
-- **USB-to-Ethernet adapter** — plug in a USB NIC for a more stable wired connection. Common USB NIC chips are supported out of the box (Realtek RTL8152/RTL8153, ASIX AX88179 gigabit, AX88772 100M, etc.) — no drivers needed.
+- **USB-to-Ethernet adapter** — plug in a USB NIC for a more stable wired connection. Tested and working out of the box: Realtek RTL8153 (gigabit) and ASIX AX88772 (100M) — no drivers needed.
+
+  Note: the K230's USB port is USB 2.0 (480 Mbps), so a 100M NIC already reaches the practical throughput ceiling (~12 MB/s). A gigabit NIC (RTL8153) was also tested as a reference — it negotiates 1000 Mbps but is still capped by the USB 2.0 port at ~20 MB/s.
 
 Both use DHCP. If a USB NIC and WiFi are both available, the USB wired path takes priority.
 
