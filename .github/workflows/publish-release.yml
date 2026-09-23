@@ -36,11 +36,7 @@ jobs:
           # under set -e; the python side prints an empty id in that case.
           rid=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" \
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${version}" \
-            | python3 -c "import json,sys
-try:
-    print(json.load(sys.stdin).get('id') or '')
-except Exception:
-    print('')")
+            | python3 -c "import json,sys; print(json.load(sys.stdin).get('id') or '')")
           if [ -n "$rid" ]; then
             code=$(curl -s -o /dev/null -w "%{http_code}" -X DELETE \
               -H "Authorization: token ${GITHUB_TOKEN}" \
