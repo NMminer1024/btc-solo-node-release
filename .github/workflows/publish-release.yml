@@ -32,9 +32,15 @@ jobs:
         run: |
           set -euo pipefail
           version="${GITHUB_REF_NAME}"
-          rid=$(curl -sf -H "Authorization: token ${GITHUB_TOKEN}" \
+          # NOTE: no -f on this curl: a 404 (no release yet) must not abort
+          # under set -e; the python side prints an empty id in that case.
+          rid=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" \
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${version}" \
-            | python3 -c "import json,sys; print(json.load(sys.stdin).get('id') or '')")
+            | python3 -c "import json,sys
+try:
+    print(json.load(sys.stdin).get('id') or '')
+except Exception:
+    print('')")
           if [ -n "$rid" ]; then
             code=$(curl -s -o /dev/null -w "%{http_code}" -X DELETE \
               -H "Authorization: token ${GITHUB_TOKEN}" \
