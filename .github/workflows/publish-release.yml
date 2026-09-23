@@ -25,33 +25,6 @@ jobs:
           test -f "${dir}/slot-${version}.img.gz.sig"
           test -f "${dir}/RELEASE_NOTES.md"
 
-      # action-gh-release does NOT overwrite the body of an existing release,
-      # so delete any stale release first (idempotent: 404 is fine).
-      # The runner no longer guarantees a GITHUB_TOKEN env var, so under
-      # `set -u` referencing ${GITHUB_TOKEN} aborts with "unbound variable".
-      # Use the github.token context expression instead: it always resolves
-      # to the job token and is injected here as GH_TOKEN.
-      - name: Delete existing release (if any)
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          version="${GITHUB_REF_NAME}"
-          # NOTE: no -f on this curl: a 404 (no release yet) must not abort
-          # under set -e; the python side prints an empty id in that case.
-          rid=$(curl -s -H "Authorization: token ${GH_TOKEN}" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${version}" \
-            | python3 -c "import json,sys; print(json.load(sys.stdin).get('id') or '')")
-          if [ -n "$rid" ]; then
-            code=$(curl -s -o /dev/null -w "%{http_code}" -X DELETE \
-              -H "Authorization: token ${GH_TOKEN}" \
-              "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${rid}")
-            echo "deleted release ${rid} (HTTP ${code})"
-          else
-            echo "no existing release for ${version}, nothing to delete"
-          fi
-
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
