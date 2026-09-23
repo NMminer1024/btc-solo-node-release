@@ -23,12 +23,14 @@ jobs:
           test -f "${dir}/manifest.json"
           test -f "${dir}/slot-${version}.img.gz"
           test -f "${dir}/slot-${version}.img.gz.sig"
+          test -f "${dir}/RELEASE_NOTES.md"
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
           name: ${{ github.ref_name }}
+          body_file: release-packages/${{ github.ref_name }}/RELEASE_NOTES.md
           files: |
             release-packages/${{ github.ref_name }}/manifest.json
             release-packages/${{ github.ref_name }}/slot-${{ github.ref_name }}.img.gz
