@@ -25,14 +25,30 @@ jobs:
           test -f "${dir}/slot-${version}.img.gz.sig"
           test -f "${dir}/RELEASE_NOTES.md"
 
+      # action-gh-release does NOT overwrite the body of an existing release,
+      # so delete any stale release first (idempotent: 404 is fine).
+      - name: Delete existing release (if any)
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="${GITHUB_REF_NAME}"
+          rid=$(curl -sf -H "Authorization: token ${GITHUB_TOKEN}" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${version}" \
+            | python3 -c "import json,sys; print(json.load(sys.stdin).get('id') or '')")
+          if [ -n "$rid" ]; then
+            code=$(curl -s -o /dev/null -w "%{http_code}" -X DELETE \
+              -H "Authorization: token ${GITHUB_TOKEN}" \
+              "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/${rid}")
+            echo "deleted release ${rid} (HTTP ${code})"
+          else
+            echo "no existing release for ${version}, nothing to delete"
+          fi
+
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
           name: ${{ github.ref_name }}
-          # Re-create the release so body_path always takes effect
-          # (the action does not overwrite the body of an existing release).
-          delete_release: true
           body_path: release-packages/${{ github.ref_name }}/RELEASE_NOTES.md
           files: |
             release-packages/${{ github.ref_name }}/manifest.json
