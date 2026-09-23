@@ -30,10 +30,10 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           name: ${{ github.ref_name }}
-          # Re-create the release so body_file always takes effect
+          # Re-create the release so body_path always takes effect
           # (the action does not overwrite the body of an existing release).
           delete_release: true
-          body_file: release-packages/${{ github.ref_name }}/RELEASE_NOTES.md
+          body_path: release-packages/${{ github.ref_name }}/RELEASE_NOTES.md
           files: |
             release-packages/${{ github.ref_name }}/manifest.json
             release-packages/${{ github.ref_name }}/slot-${{ github.ref_name }}.img.gz
