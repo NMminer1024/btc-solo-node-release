@@ -138,10 +138,6 @@ A: Confirm both devices are on the same LAN; confirm the pool URL is `stratum+tc
 
 A: Normal operating temperature is about 55–65°C, viewable live on the System page. Keep the area around the device well ventilated.
 
-**Q: How do I reset the device?**
-
-A: Power cycle it. Blockchain data lives on the SD card and survives reboots.
-
 **Q: I don't trust the pre-synced block data — can I wipe it and re-sync myself?**
 
 A: Yes, but think carefully. The web console's Dashboard has a **Clean Block Data** button in the ⋮ menu of the Bitcoind card; after confirming, the device stops bitcoind, wipes all block data, and restarts to re-download and re-validate the entire chain from scratch. Limited by the device's network bandwidth and SD card read/write speed, a full re-sync is expected to take **1–2 months**, during which mining is paused. We strongly recommend against re-syncing on your own — unless you fully understand what that means.
