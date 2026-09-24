@@ -144,7 +144,15 @@ A: Power cycle it. Blockchain data lives on the SD card and survives reboots.
 
 **Q: Why is the block data only ~15 GB instead of the full chain (hundreds of GB)?**
 
-A: The node runs in **pruned mode** (`prune=4096` in `bitcoin.conf`). It still downloads and fully validates every block from genesis, but once a block is verified it deletes the old raw block data and keeps only the most recent ~4 GB. That is enough to keep validating new blocks and serving your miners, while fitting the whole chain on a small SD card. The trade-off: the node can't serve full historical block data to other peers.
+A: This is a deliberate design choice, not a compromise. The node runs in **pruned mode** (`prune=4096` in `bitcoin.conf`): it still downloads and fully validates every block from genesis — exactly like a full node — but once a block is verified it deletes the old raw block data and keeps only the most recent ~4 GB.
+
+For solo mining, this is the most economical mode:
+
+- **Mining is completely unaffected** — finding and validating new blocks only needs the UTXO set and the latest chain state, which pruned mode keeps in full;
+- **Security is completely unaffected** — every block is still independently validated; no third-party data is ever trusted;
+- **Storage requirements drop dramatically** — the full chain is now 600+ GB and still growing, while pruned mode stays within ~15 GB, fitting on a small SD card at lower cost and higher reliability.
+
+What gets deleted is only the raw data of old blocks that will never be needed again. The sole trade-off is that the node can't serve full historical block data to other peers — which has nothing to do with your mining.
 
 ### Support
 
