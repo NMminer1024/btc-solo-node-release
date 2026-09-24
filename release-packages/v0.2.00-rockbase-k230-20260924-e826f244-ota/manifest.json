@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.2.00-rockbase-k230-20260924-e826f244-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-09-24",
+  "notes": "### Added\n- The About page now has a Storage card that shows the size and usage of every partition on the board (Root FS, Config, Block Data) with a progress bar for each, plus a Total Disk row for the whole card at a glance.\n\n### Changed\n- The Dashboard's \"Root FS\" line was replaced with \"Total Storage\", which shows how much of the whole card is used. Per-partition details moved to the new Storage card in About.\n- The redundant Firmware and System cards on the About page were removed. The \"Last Updated\" date now lives inside the Firmware Update card.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.2.00-rockbase-k230-20260924-e826f244-ota/slot-v0.2.00-rockbase-k230-20260924-e826f244-ota.img.gz",
+    "sha256": "1af96ebc6a67db79ad8d3d642191940e5d37fe34e778e87ece0a2af5e9dfd6e0",
+    "size": 77177633,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.2.00-rockbase-k230-20260924-e826f244-ota/slot-v0.2.00-rockbase-k230-20260924-e826f244-ota.img.gz.sig"
+  }
+}
