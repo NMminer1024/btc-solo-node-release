@@ -128,7 +128,7 @@ All firmware packages are published on the [Releases](https://github.com/NMminer
 
 **Q: How long until it's ready after first power-on?**
 
-A: The first boot downloads and verifies the entire blockchain (~15 GB of downloads). Depending on your connection this takes several hours to a day. The device runs in pruned mode, keeping only the most recent ~4 GB of block data after verification. You can connect miners during sync, but block-finding probability is negligible until sync completes.
+A: The device ships with **pre-synced block data** (downloaded and verified at the factory), so the first boot does not need to sync the whole chain from scratch — it only catches up on the newest blocks produced since the firmware was built. Under normal conditions it reaches a mineable state within minutes to a few hours, depending on your connection and how recent the pre-synced data is. You can connect miners during the catch-up, but block-finding probability is negligible until it completes.
 
 **Q: My miner can't connect — what do I check?**
 
