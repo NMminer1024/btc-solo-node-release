@@ -127,16 +127,24 @@ All firmware packages are published on the [Releases](https://github.com/NMminer
 ### FAQ
 
 **Q: How long until it's ready after first power-on?**
+
 A: The first boot downloads and verifies the entire blockchain (~15 GB of downloads). Depending on your connection this takes several hours to a day. The device runs in pruned mode, keeping only the most recent ~4 GB of block data after verification. You can connect miners during sync, but block-finding probability is negligible until sync completes.
 
 **Q: My miner can't connect — what do I check?**
+
 A: Confirm both devices are on the same LAN; confirm the pool URL is `stratum+tcp://IP:3333` (port 3333); check that the LCD Stratum page shows "Running".
 
 **Q: Does the device run hot?**
+
 A: Normal operating temperature is about 55–65°C, viewable live on the System page. Keep the area around the device well ventilated.
 
 **Q: How do I reset the device?**
+
 A: Power cycle it. Blockchain data lives on the SD card and survives reboots.
+
+**Q: Why is the block data only ~15 GB instead of the full chain (hundreds of GB)?**
+
+A: The node runs in **pruned mode** (`prune=4096` in `bitcoin.conf`). It still downloads and fully validates every block from genesis, but once a block is verified it deletes the old raw block data and keeps only the most recent ~4 GB. That is enough to keep validating new blocks and serving your miners, while fitting the whole chain on a small SD card. The trade-off: the node can't serve full historical block data to other peers.
 
 ### Support
 
