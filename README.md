@@ -142,6 +142,10 @@ A: Normal operating temperature is about 55–65°C, viewable live on the System
 
 A: Power cycle it. Blockchain data lives on the SD card and survives reboots.
 
+**Q: I don't trust the pre-synced block data — can I wipe it and re-sync myself?**
+
+A: Yes, but think carefully. The web console's Dashboard has a **Clean Block Data** button in the ⋮ menu of the Bitcoind card; after confirming, the device stops bitcoind, wipes all block data, and restarts to re-download and re-validate the entire chain from scratch. Limited by the device's network bandwidth and SD card read/write speed, a full re-sync is expected to take **1–2 months**, during which mining is paused. We strongly recommend against re-syncing on your own — unless you fully understand what that means.
+
 **Q: Why is the block data only ~15 GB instead of the full chain (hundreds of GB)?**
 
 A: This is a deliberate design choice, not a compromise. The node runs in **pruned mode** (`prune=4096` in `bitcoin.conf`): it still downloads and fully validates every block from genesis — exactly like a full node — but once a block is verified it deletes the old raw block data and keeps only the most recent ~4 GB.
