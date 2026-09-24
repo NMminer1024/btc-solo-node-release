@@ -128,31 +128,23 @@ All firmware packages are published on the [Releases](https://github.com/NMminer
 
 **Q: How long until it's ready after first power-on?**
 
-A: The device ships with **pre-synced block data** (downloaded and verified at the factory), so the first boot does not need to sync the whole chain from scratch — it only catches up on the newest blocks produced since the firmware was built. Under normal conditions it reaches a mineable state within minutes to a few hours, depending on your connection and how recent the pre-synced data is. You can connect miners during the catch-up, but block-finding probability is negligible until it completes.
+A: The device ships with **pre-synced block data**, so first boot only catches up on new blocks — usually minutes to a few hours. The Stratum service stays offline until catch-up completes, so miners can't connect yet; once caught up, they connect and mine normally.
 
 **Q: My miner can't connect — what do I check?**
 
-A: Confirm both devices are on the same LAN; confirm the pool URL is `stratum+tcp://IP:3333` (port 3333); check that the LCD Stratum page shows "Running".
+A: Same LAN? Pool URL is `stratum+tcp://IP:3333`? LCD Stratum page shows "Running"?
 
 **Q: Does the device run hot?**
 
-A: Normal operating temperature is about 55–65°C, viewable live on the System page. Keep the area around the device well ventilated.
+A: Normal is about 55–65°C (live on the System page). Keep it well ventilated.
 
-**Q: I don't trust the pre-synced block data — can I wipe it and re-sync myself?**
+**Q: I don't trust the pre-synced data — can I wipe it and re-sync myself?**
 
-A: Yes, but think carefully. The web console's Dashboard has a **Clean Block Data** button in the ⋮ menu of the Bitcoind card; after confirming, the device stops bitcoind, wipes all block data, and restarts to re-download and re-validate the entire chain from scratch. Limited by the device's network bandwidth and SD card read/write speed, a full re-sync is expected to take **1–2 months**, during which mining is paused. We strongly recommend against re-syncing on your own — unless you fully understand what that means.
+A: Yes — **Clean Block Data** in the ⋮ menu of the Bitcoind card (web console). But a full re-sync takes **1–2 months** on this hardware and mining pauses meanwhile. Only do this if you know what it means.
 
 **Q: Why is the block data only ~15 GB instead of the full chain (hundreds of GB)?**
 
-A: This is a deliberate design choice, not a compromise. The node runs in **pruned mode** (`prune=4096` in `bitcoin.conf`): it still downloads and fully validates every block from genesis — exactly like a full node — but once a block is verified it deletes the old raw block data and keeps only the most recent ~4 GB.
-
-For solo mining, this is the most economical mode:
-
-- **Mining is completely unaffected** — finding and validating new blocks only needs the UTXO set and the latest chain state, which pruned mode keeps in full;
-- **Security is completely unaffected** — every block is still independently validated; no third-party data is ever trusted;
-- **Storage requirements drop dramatically** — the full chain is now 600+ GB and still growing, while pruned mode stays within ~15 GB, fitting on a small SD card at lower cost and higher reliability.
-
-What gets deleted is only the raw data of old blocks that will never be needed again. The sole trade-off is that the node can't serve full historical block data to other peers — which has nothing to do with your mining.
+A: The node runs in **pruned mode**: every block is still fully validated, but old raw block data is deleted after verification, keeping only the most recent ~4 GB. Mining and security are completely unaffected — only the raw data of old blocks is dropped, which fits the whole chain on a small SD card. The sole trade-off: it can't serve historical blocks to other peers, which has nothing to do with your mining.
 
 ### Support
 
