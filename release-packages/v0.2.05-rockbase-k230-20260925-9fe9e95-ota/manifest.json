@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.2.05-rockbase-k230-20260925-9fe9e95-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-09-25",
+  "notes": "### Improved\n- Boot screen now waits until the mining connection (Stratum) is actually up before leaving, and shows the live block height while waiting.\n\n### Fixed\n- Block data partition now mounts correctly after an OTA upgrade (previously could fail to mount after slot switch).\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.2.05-rockbase-k230-20260925-9fe9e95-ota/slot-v0.2.05-rockbase-k230-20260925-9fe9e95-ota.img.gz",
+    "sha256": "f2cd523c6e290c06e9005ecefaf7a4920865d3f85ef7d281ea1565b41fd16579",
+    "size": 77200654,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.2.05-rockbase-k230-20260925-9fe9e95-ota/slot-v0.2.05-rockbase-k230-20260925-9fe9e95-ota.img.gz.sig"
+  }
+}
