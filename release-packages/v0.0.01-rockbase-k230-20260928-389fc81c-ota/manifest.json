@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.0.01-rockbase-k230-20260928-389fc81c-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-09-28",
+  "notes": "### Added\n- SD card health monitoring: the System page now shows a small dashboard with the key SD card health metrics, so you can see card condition at a glance.\n- Boot screen now shows the live Bitcoin block height as soon as the node starts syncing.\n\n### Improved\n- Mining process (ckpool) uses noticeably less memory over long runs, leaving more headroom for the rest of the system.\n- Boot screen now waits until the mining connection is actually up before moving on, so the first screen you see reflects a working node.\n- Time sync is lighter on the system: a one-shot sync at boot plus a daily re-sync instead of a constantly running time service.\n\n### Fixed\n- After an OTA update, the block data partition now always comes back mounted correctly.\n- Interrupted OTA updates no longer leave stale image files behind that eat up storage.\n- The disk usage list now visually separates the total row from individual partitions, making it easier to read.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.01-rockbase-k230-20260928-389fc81c-ota/slot-v0.0.01-rockbase-k230-20260928-389fc81c-ota.img.gz",
+    "sha256": "ae1e3659ec1faa389bc237a43b209fedd51f73e1ab18609627bd0fea89b4ede0",
+    "size": 77184895,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.01-rockbase-k230-20260928-389fc81c-ota/slot-v0.0.01-rockbase-k230-20260928-389fc81c-ota.img.gz.sig"
+  }
+}
