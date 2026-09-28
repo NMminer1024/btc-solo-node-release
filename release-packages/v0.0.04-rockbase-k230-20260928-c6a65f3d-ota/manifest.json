@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.0.04-rockbase-k230-20260928-c6a65f3d-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-09-28",
+  "notes": "### Improved\n- Closing any popup or overlay (peer map, miners list, network settings, timezone, OTA) is now instant \u2014 no more brief freeze on the frame it closes.\n- Button click feedback no longer stalls the screen; the UI stays responsive while the click sound plays.\n\n### Added\n- Peer map now uses distinct water-drop pin markers so you can tell at a glance which peer is this node, which are inbound, and which are outbound (LCD and web).\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.04-rockbase-k230-20260928-c6a65f3d-ota/slot-v0.0.04-rockbase-k230-20260928-c6a65f3d-ota.img.gz",
+    "sha256": "8b1aa40432de7f11fcb032c585f0d77cc3f771ca62f6f96f64a28a2d87feb54f",
+    "size": 82406865,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.04-rockbase-k230-20260928-c6a65f3d-ota/slot-v0.0.04-rockbase-k230-20260928-c6a65f3d-ota.img.gz.sig"
+  }
+}
