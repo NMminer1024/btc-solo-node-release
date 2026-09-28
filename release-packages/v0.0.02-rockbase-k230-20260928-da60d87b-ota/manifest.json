@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.0.02-rockbase-k230-20260928-da60d87b-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-09-28",
+  "notes": "### Improved\n- The Network page now shows your IP address and MAC address on a single clean line.\n- The Bitcoind page now shows how long the device has been running (uptime) in the corner.\n- The Stratum page no longer shows a blank placeholder for total hashrate when no miner is connected.\n- The block height numbers on the Bitcoind page now use a consistent, easier-to-read color.\n\n### Fixed\n- Changing the timezone no longer gets stuck on \"Applying\"; it now finishes immediately.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.02-rockbase-k230-20260928-da60d87b-ota/slot-v0.0.02-rockbase-k230-20260928-da60d87b-ota.img.gz",
+    "sha256": "d48a7b31019688eb4dbe034948289db5f96796d73f2491b9836fe4bd6f4a4d28",
+    "size": 77186668,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.02-rockbase-k230-20260928-da60d87b-ota/slot-v0.0.02-rockbase-k230-20260928-da60d87b-ota.img.gz.sig"
+  }
+}
