@@ -18,10 +18,11 @@ No OS to install, no software to configure, no command line required. The device
 **It can:**
 
 - Verify every block on the Bitcoin mainnet by itself, with no reliance on centralized services;
-- **Mine without any third-party pool** — your node is its own mining pool, so no external pool service is required at all, and any block reward you find is 100% yours, with no fee share;
-- **Keep mining where external pools can't reach** — in some regions and countries where outside mining pools are blocked, throttled, or unreliable, your miners just point to your own node on the local network and keep hashing;
-- **Make you a real part of the blockchain** — you're not just using Bitcoin; you're running a validating node that verifies and relays blocks, directly contributing to the network's decentralization;
-- Monitor node, miner, and device health in real time (touchscreen + web console).
+- Provide a local mining endpoint for your miners — any block reward you find is 100% yours, with no fee share;
+- Monitor node, miner, and device health in real time (touchscreen + web console);
+- **Mine completely without a third-party pool** — your node is its own mining pool, so no external pool service is required at all;
+- **Keep mining where external pools can't reach** — in some countries and regions where outside mining pools are blocked, throttled, or unreliable, your miners just point to your own node on the local network and keep hashing;
+- **Make you a real part of the blockchain** — you're not just using Bitcoin; you're running a validating node that verifies and relays blocks, directly contributing to the network's decentralization.
 
 **It can't (common misconceptions):**
 
