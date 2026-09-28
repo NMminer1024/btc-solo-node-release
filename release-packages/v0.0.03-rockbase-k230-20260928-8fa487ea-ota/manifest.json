@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.0.03-rockbase-k230-20260928-8fa487ea-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-09-28",
+  "notes": "### Improved\n- The Network page now shows your IP address and MAC address on a single clean line.\n- The Bitcoind page now shows how long the device has been running (uptime) in the corner.\n- The Stratum page no longer shows a blank placeholder for total hashrate when no miner is connected.\n- The block height numbers on the Bitcoind page now use a consistent, easier-to-read color.\n- The Peer Map now updates live while it is open: peers that connect or disconnect appear and disappear without closing and reopening the map (both the on-screen UI and the web dashboard).\n\n### Fixed\n- Changing the timezone no longer gets stuck on \"Applying\"; it now finishes immediately.\n- Closing the Peer Map with the X button is now instant instead of occasionally taking a long time.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.03-rockbase-k230-20260928-8fa487ea-ota/slot-v0.0.03-rockbase-k230-20260928-8fa487ea-ota.img.gz",
+    "sha256": "8176ad1e91114169e783202d090533117704624d51f3dfb2c42c4e268457e81f",
+    "size": 77186165,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.03-rockbase-k230-20260928-8fa487ea-ota/slot-v0.0.03-rockbase-k230-20260928-8fa487ea-ota.img.gz.sig"
+  }
+}
