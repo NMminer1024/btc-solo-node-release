@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.0.05-rockbase-k230-20260929-046380e3-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-09-29",
+  "notes": "### Fixed\n- The SD Card Health \"Tracking\" line on the About page could show a wrong start date (1970) and an absurd tracking duration on boards without a real-time clock. It now only starts counting once the system time is synced, so the date and duration are correct.\n- Closing a popup (Peer Map, Miners, Network Settings, Timezone, etc.) with the X button could occasionally take a long time to disappear. It now closes instantly.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.05-rockbase-k230-20260929-046380e3-ota/slot-v0.0.05-rockbase-k230-20260929-046380e3-ota.img.gz",
+    "sha256": "96b2b47bc60738281a99eedec2479e12f02a58833115c59eb751321259d211b1",
+    "size": 82409837,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.0.05-rockbase-k230-20260929-046380e3-ota/slot-v0.0.05-rockbase-k230-20260929-046380e3-ota.img.gz.sig"
+  }
+}
