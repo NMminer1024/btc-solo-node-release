@@ -13,6 +13,12 @@ jobs:
     steps:
       - name: Check out release repo
         uses: actions/checkout@v4
+        with:
+          # Slot images (slot-*.img.gz) are Git-LFS objects: the 2G rootfs
+          # gzips above GitHub's 100MB per-file git limit. lfs: true
+          # materializes the real files before the validate/upload steps
+          # (git-lfs is preinstalled on ubuntu runners).
+          lfs: true
 
       - name: Validate package files
         shell: bash
