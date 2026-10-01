@@ -1,0 +1,2 @@
+### Fixed
+- LCD / web peer count freezing at 0 on busy boards: the status daemon's loop only serviced the first due shard per pass, and on the single-core K230 one system-stat round takes 5-7s under load, so the 5s system shard monopolized the loop and the peer/stratum/chain shards were starved. All due shards are now serviced per pass. Verified on a live board: peer count recovered to 10 within a minute.

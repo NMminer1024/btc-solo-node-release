@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.1.01-rockbase-k230-20261001-b947d16-ota",
+  "min_version": "v0.1.00",
+  "released": "2026-10-01",
+  "notes": "### Fixed\n- LCD / web peer count freezing at 0 on busy boards: the status daemon's loop only serviced the first due shard per pass, and on the single-core K230 one system-stat round takes 5-7s under load, so the 5s system shard monopolized the loop and the peer/stratum/chain shards were starved. All due shards are now serviced per pass. Verified on a live board: peer count recovered to 10 within a minute.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.01-rockbase-k230-20261001-b947d16-ota/slot-v0.1.01-rockbase-k230-20261001-b947d16-ota.img.gz",
+    "sha256": "02bcc394aaae81128539d85edeab1913fde354c6a861e43160cd2b8520999429",
+    "size": 108300459,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.01-rockbase-k230-20261001-b947d16-ota/slot-v0.1.01-rockbase-k230-20261001-b947d16-ota.img.gz.sig"
+  }
+}
