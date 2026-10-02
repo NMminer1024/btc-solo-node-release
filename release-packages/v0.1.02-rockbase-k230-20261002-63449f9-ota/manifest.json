@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.1.02-rockbase-k230-20261002-63449f9-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-10-02",
+  "notes": "### Notes\n- This is a maintenance re-release of the v0.1.01 firmware. There are no functional changes.\n- Devices already running v0.1.01 do not need to upgrade.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.02-rockbase-k230-20261002-63449f9-ota/slot-v0.1.02-rockbase-k230-20261002-63449f9-ota.img.gz",
+    "sha256": "88601f8478630761f23ff050a70f8c51b46bf53bc5d62ac109f6724c38a35a94",
+    "size": 108300205,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.02-rockbase-k230-20261002-63449f9-ota/slot-v0.1.02-rockbase-k230-20261002-63449f9-ota.img.gz.sig"
+  }
+}
