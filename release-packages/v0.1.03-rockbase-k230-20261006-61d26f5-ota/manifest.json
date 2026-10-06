@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.1.03-rockbase-k230-20261006-61d26f5-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-10-06",
+  "notes": "### Added\n- Boot-up sound: a short ascending 4-beep \"connecting\" chime plays while the device starts.\n\n### Fixed\n- Hashrate history now correctly keeps only the last 7 days. Older data is\n  cleaned up automatically, and the history chart no longer drifts back\n  beyond the 7-day window.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.03-rockbase-k230-20261006-61d26f5-ota/slot-v0.1.03-rockbase-k230-20261006-61d26f5-ota.img.gz",
+    "sha256": "b3588d8b01705f3e53db93a57c1a2d7cdf26bc36f70e972f82e9cd34fd2643c8",
+    "size": 108304062,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.03-rockbase-k230-20261006-61d26f5-ota/slot-v0.1.03-rockbase-k230-20261006-61d26f5-ota.img.gz.sig"
+  }
+}
