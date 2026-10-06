@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.1.04-rockbase-k230-20261007-6064f73-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-10-07",
+  "notes": "### Added\n- New world map boot video (blockchain-themed flat animation, 5s @ 24fps)\n- New NM logo with \"NM\" branding below the miner figure\n\n### Improved\n- Boot video fade-in reduced from 1s to 0.5s for faster perceived startup\n- Boot video plays at 24fps for smoother motion\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.04-rockbase-k230-20261007-6064f73-ota/slot-v0.1.04-rockbase-k230-20261007-6064f73-ota.img.gz",
+    "sha256": "ea403c2a6a4c92a43334ba19a5128c78cd6f66eda38a2af374278e163d3a499a",
+    "size": 92526325,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.04-rockbase-k230-20261007-6064f73-ota/slot-v0.1.04-rockbase-k230-20261007-6064f73-ota.img.gz.sig"
+  }
+}
