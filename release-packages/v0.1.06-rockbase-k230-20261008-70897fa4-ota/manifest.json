@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.1.06-rockbase-k230-20261008-70897fa4-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-10-08",
+  "notes": "### Improved\n- System partition layout optimized to leave more space for the Bitcoin data partition.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.06-rockbase-k230-20261008-70897fa4-ota/slot-v0.1.06-rockbase-k230-20261008-70897fa4-ota.img.gz",
+    "sha256": "913fe6d23363085cc8c2643d25bf114ceccb884126475e31dd1b6f4ba354d7f2",
+    "size": 90957792,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.06-rockbase-k230-20261008-70897fa4-ota/slot-v0.1.06-rockbase-k230-20261008-70897fa4-ota.img.gz.sig"
+  }
+}
