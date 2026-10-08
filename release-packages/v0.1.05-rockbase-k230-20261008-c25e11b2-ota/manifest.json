@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.1.05-rockbase-k230-20261008-c25e11b2-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-10-08",
+  "notes": "### Improved\n- On a fresh flash, the Bitcoin data partition is now about 3.5 GB larger, giving the node much more headroom before the disk can fill up.\n- The system now keeps its internal logs trimmed automatically, so long-running devices no longer risk running out of space on the settings partition.\n\n### Fixed\n- If the Wi-Fi connection hangs, the node now recovers it on its own instead of freezing and rebooting the whole device.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.05-rockbase-k230-20261008-c25e11b2-ota/slot-v0.1.05-rockbase-k230-20261008-c25e11b2-ota.img.gz",
+    "sha256": "20003f9fb76539c96f2b76372d9ce2f6ad7d8bf95270a467a6f1d2c89c69628d",
+    "size": 90957307,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.1.05-rockbase-k230-20261008-c25e11b2-ota/slot-v0.1.05-rockbase-k230-20261008-c25e11b2-ota.img.gz.sig"
+  }
+}
