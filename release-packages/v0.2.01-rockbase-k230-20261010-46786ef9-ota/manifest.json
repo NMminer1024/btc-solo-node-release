@@ -1,0 +1,14 @@
+{
+  "product": "rockbase",
+  "hw": ["rockbase"],
+  "version": "v0.2.01-rockbase-k230-20261010-46786ef9-ota",
+  "min_version": "v0.0.01",
+  "released": "2026-10-10",
+  "notes": "### Added\n- If the node cannot connect to a network after startup, the Wi-Fi setup prompt now opens automatically.\n\n### Improved\n- Hashrate history now stays current when miners stop reporting.\n- The LCD page uses the Bitcoin Core name for clearer identification.\n\n### Fixed\n- Fixed an LCD black-screen issue with certain display cable setups.\n",
+  "slot": {
+    "url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.2.01-rockbase-k230-20261010-46786ef9-ota/slot-v0.2.01-rockbase-k230-20261010-46786ef9-ota.img.gz",
+    "sha256": "0c6cc36fe1c51e0c55163dd858b52b2fcee98ecb309307433df491d9de2ca65d",
+    "size": 90954927,
+    "sig_url": "https://github.com/NMminer1024/btc-solo-node-release/releases/download/v0.2.01-rockbase-k230-20261010-46786ef9-ota/slot-v0.2.01-rockbase-k230-20261010-46786ef9-ota.img.gz.sig"
+  }
+}
